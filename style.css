@@ -1,0 +1,347 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+
+/* TYPE SELECTOR */
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 90vw;
+	margin: 0 auto;
+}
+
+/* ID SELECTOR */
+#css-zen-garden {
+	font: 'Playfair Display', serif;
+	line-height: 1.88889;
+	color: #555753;
+	/* BACKGROUND TO BODY */
+	background: url(bg1.jpg) no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	color: #ffe8e6;
+	font-size: large;
+	opacity: 50%;
+}
+#css-zen-garden:hover{
+	opacity: 100%;
+}
+
+header div:first-child {
+	/* background-color: green; */
+	width: 6rem;
+	font-size: xx-large;
+
+}
+
+header div:nth-child(2) {
+	align-content: space-evenly;
+	/* background-color: #9685BA; */
+	width: 10rem;
+	margin-left: 900px;
+	font-size: xx-large;
+}
+
+
+header div:first-child,
+header div:nth-child(2) {
+	transition: ease all 1.3s;
+	/* border-radius: 15px; */
+	/* animation-name: animationn;
+    animation-duration: 6s; */
+	animation: animationn 6s infinite;
+}
+
+@keyframes animationn {
+	0% {
+		/* transform: translateX(100%); */
+		/* margin-left: 0rem; */
+		/* opacity: 50%; */
+		transform: scale(3.3);
+		transition: ease all 2s;
+		/* border-radius: 50%; */
+	}
+
+	100% {
+		/* transform: translateX(0); */
+		/* margin-left: 6rem; */
+		/* opacity: 100%; */
+		transition: ease all 2s;
+		transform: scale(6.3);
+	}
+}
+
+header {
+	margin-left: 9rem;
+	margin-top: 8rem;
+	position: relative;
+	display: flex;
+	height: 35vw;
+	transition: ease all 2s;
+	border-radius: 15px;
+
+	/* background-color: red; */
+}
+
+p {
+	margin-top: 0;
+	text-align: justify;
+}
+
+
+/* DESIGNING ALL THE HEADINGS */
+/* ID SELECTOR */
+h1,
+h2,
+h3 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bolder;
+	font-size: 1.8rem;
+	color: #C6D76B;
+	text-shadow: #C6D76B 2px 1px 5px;
+}
+
+/* PSEUDO ELEMENT SELECTOR */
+h1::after,
+h2::after,
+h3::after {
+	content: " 🎀 ";
+}
+
+h1::before,
+h2::before,
+h3::before {
+	content: " 🦋 ";
+}
+
+/* PSEUDO CLASS SELECTOR */
+h1:hover,
+h2:hover,
+h3:hover {
+	font-style: italic;
+
+}
+
+h3 {
+	font: italic normal 1.4em georgia, sans-serif bold;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+
+}
+
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #B7A5DF;
+}
+
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #D4CDDC;
+}
+
+/* ATTRIBUTE SELECTOR */
+a[target="_blank"] {
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+	color: #9685BA;
+}
+
+abbr {
+	border-bottom: none;
+}
+
+
+/* specific divs */
+/* CLASS SELECTOR */
+.page-wrapper {
+	background: url(zen-bg.jpg) no-repeat top left;
+	padding: 0 175px 0 110px;
+	margin: 0;
+	position: relative;
+}
+
+.intro {
+	min-width: 470px;
+	width: 100%;
+}
+
+/* DESCENDANT COMBINATOR */
+header h1 {
+	/* background: transparent url(h1.gif) no-repeat top left; */
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+	height: 87px;
+	float: left;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+header h2 {
+	/* background: transparent url(h2.gif) no-repeat top left; */
+	margin-top: 58px;
+	margin-bottom: 40px;
+	width: 200px;
+	height: 18px;
+	float: right;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+.summary {
+	clear: both;
+	margin: 10px 20px 20px 10px;
+	width: 160px;
+	float: left;
+	box-shadow: 0px 0px 8px 5px #FFD140 inset;
+	/* Border  */
+	padding: 10px;
+}
+
+.summary p {
+	font: italic 1.1em/2.2 georgia;
+	text-align: center;
+	color: #FFD140;
+}
+
+.preamble {
+	clear: right;
+	padding: 0px 10px 0 10px;
+}
+
+.supporting {
+	padding-left: 10px;
+	margin-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+	text-align: center;
+	font-size: large;
+	background-color: #F39200;
+}
+
+/* DESCENDANT COMBINATOR */
+footer a:link,
+footer a:visited {
+	margin-right: 20px;
+}
+
+.sidebar {
+	margin-left: 600px;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+
+.sidebar .wrapper {
+	font: 10px verdana, sans-serif;
+	/* background: transparent url(paper-bg.jpg) top left repeat-y; */
+	padding: 10px;
+	margin-top: 150px;
+	width: 130px;
+	background-color: #FF5048;
+	margin-right: 9px;
+	box-shadow: 0px 0px 8px 5px #B4D9EF inset;
+}
+
+.sidebar h3.select {
+	/* background: transparent url(h3.gif) no-repeat top left; */
+	margin: 10px 0 5px 0;
+	width: 97px;
+	height: 16px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar h3.archives {
+	background: transparent url(h5.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+	width: 57px;
+	height: 14px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar h3.resources {
+	background: transparent url(h6.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+	width: 63px;
+	height: 10px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar li {
+	line-height: 1.3em;
+	background: transparent url(cr1.gif) no-repeat top center;
+	display: block;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	list-style-type: none;
+	font-size: small;
+}
+
+/* ::before PSEUDO ELEMENT SELECTOR*/
+.sidebar li::before {
+	content: " ☆ ";
+}
+
+.sidebar li a:link {
+	color: #B4D9EF;
+}
+
+.sidebar li a:visited {
+	color: #B3AE94;
+}
+
+
+.extra1 {
+	background: transparent url(cr2.gif) top left no-repeat;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 148px;
+	height: 110px;
+}
